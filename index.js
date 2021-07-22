@@ -54,3 +54,27 @@ function searchMinMax(arr) {
 // Проверка функции 
 
 searchMinMax(arr)
+
+
+
+// ++++++++++++++ Task 3 ++++++++++++++++
+
+function checkPalindrome(str) {
+    let result = true;
+    for (let i = 0; i < str.length -1; i++) {
+        if (str[i] !== str[str.length - 1 - i]) {
+            result = false;
+            break;
+            
+    }
+}
+    console.log(result)
+} 
+
+// Проверка функции 
+
+checkPalindrome("утоп в по ту");
+checkPalindrome("утоп в поту");
+
+
+
