@@ -39,3 +39,18 @@ const arr = [4,5,6,6,1,2,3]
 sortArray(arr);
 sortArray(arr, sortDirection.DOWN);
 
+
+// ++++++++++++++ Task 2 +++++++++++++++++
+
+function searchMinMax(arr) {
+    let min = max = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        min = arr[i] <  min ? arr[i] : min
+        max = arr[i] >  max ? arr[i] : max
+    }
+    console.log(`Минимальное значение массива: ${min},\nМаксимальное значение массива: ${max}`)
+}
+
+// Проверка функции 
+
+searchMinMax(arr)
