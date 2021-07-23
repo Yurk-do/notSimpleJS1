@@ -187,3 +187,19 @@ function changePositions(str) {
 
 // Проверка функции 
 changePositions("123456")
+
+
+// ++++++++++++++ Task 11 ++++++++++++++++
+
+function getDecade(day) {
+    if (day < 11) {
+      console.log("First decade")
+    }  else if (day < 21) {
+      console.log("Second decade")
+    } else {
+      console.log("Third decade")
+    }  
+}
+
+// Проверка функции 
+getDecade(11)
