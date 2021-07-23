@@ -117,3 +117,13 @@ function checkAnagrams(string1, string2) {
 // Проверка функции 
 checkAnagrams("abc def j", "jabcdef")
 checkAnagrams("abc def j", "abc def")
+
+// ++++++++++++++ Task 6 ++++++++++++++++
+
+function countVowels(str) {
+  const template = /[aeiou]/g; // Шаблон для гласных букв
+  console.log(str.toLowerCase().match(template).length) // приведение строки к нижнему регистру, извлечение гласных в массив и вывод длины массива (подсчет гласных)
+} 
+
+// Проверка функции 
+countVowels('agjksbceuhalk;lAI');
