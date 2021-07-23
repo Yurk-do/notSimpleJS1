@@ -153,3 +153,21 @@ function getAverage(numbers) {
 
 // Проверка функции 
 getAverage([1,2,3,4,5,6,7,8,9,10])
+
+
+// ++++++++++++++ Task 9 ++++++++++++++++
+
+function inArray(text, array){
+    let result = false;
+    for(let i = 0; i < array.length; i+=1) {
+      if (array[i] === text) {
+        result = true; 
+        break;
+      } 
+    }
+    console.log(result)
+}
+
+// Проверка функции 
+inArray("hello", ["where", "what", "how", "hello", "who"] )
+inArray("hello", ["where", "what", "how", "who"] )
