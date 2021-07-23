@@ -127,3 +127,16 @@ function countVowels(str) {
 
 // Проверка функции 
 countVowels('agjksbceuhalk;lAI');
+
+
+// ++++++++++++++ Task 7 ++++++++++++++++
+function reverseNumbers(numbers) {
+    let newArray = [];
+    for (let i = numbers.length - 1; i >= 0; i -= 1) {
+        newArray.push(numbers[i])
+    }
+    console.log(newArray)
+}
+
+// Проверка функции 
+reverseNumbers([1,2,3,4,5,6,7,8,9,10])
