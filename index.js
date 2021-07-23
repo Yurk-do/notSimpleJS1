@@ -93,6 +93,27 @@ function makeFizzBuzz(n) {
   }
 }
 
-
 // Проверка функции
 makeFizzBuzz(80);
+
+
+// ++++++++++++++ Task 5 ++++++++++++++++
+
+
+function checkAnagrams(string1, string2) {
+  const template = /\W+/g;  // Шаблон для извлечения проблелов и знаков препинания
+  string1 = string1.replace(template, ""); // удаление пробелов и знаков препинания
+  string2 = string2.replace(template, ""); // удаление пробелов и знаков препинания
+  if (string1.length !== string2.length) {  // проверка, равны ли строки по длине (количеству символов)
+    console.log("They aren't anagrams")        
+  }
+  else {
+    string1 = string1.split("").sort().join("") // перевод строки в массив букв, его сортировка и обратный перевод в строку
+    string2 = string2.split("").sort().join("") // перевод строки в массив букв, его сортировка и обратный перевод в строку
+    console.log(string1 !== string2 ? "They aren't anagrams" : "The're anagrams") // проверка строк на идентичность
+  }
+}
+
+// Проверка функции 
+checkAnagrams("abc def j", "jabcdef")
+checkAnagrams("abc def j", "abc def")
