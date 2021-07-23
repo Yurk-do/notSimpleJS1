@@ -140,3 +140,16 @@ function reverseNumbers(numbers) {
 
 // Проверка функции 
 reverseNumbers([1,2,3,4,5,6,7,8,9,10])
+
+// ++++++++++++++ Task 8 ++++++++++++++++
+
+function getAverage(numbers) {
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i += 1) {
+        sum += numbers[i]
+    }
+    console.log(sum / numbers.length)
+}
+
+// Проверка функции 
+getAverage([1,2,3,4,5,6,7,8,9,10])
