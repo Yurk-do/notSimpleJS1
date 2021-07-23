@@ -171,3 +171,19 @@ function inArray(text, array){
 // Проверка функции 
 inArray("hello", ["where", "what", "how", "hello", "who"] )
 inArray("hello", ["where", "what", "how", "who"] )
+
+
+// ++++++++++++++ Task 10 ++++++++++++++++
+
+function changePositions(str) {
+    let array = str.split("");
+    for (let i = 0; i < array.length; i += 2) {
+      let temp = array[i];
+        array[i] = array[i+1];
+        array[i+1] = temp;
+    }
+    console.log(array.join(""))
+}
+
+// Проверка функции 
+changePositions("123456")
