@@ -96,113 +96,114 @@ function makeFizzBuzz(n) {
 // Проверка функции
 makeFizzBuzz(80);
 
-
 // ++++++++++++++ Task 5 ++++++++++++++++
 
-
 function checkAnagrams(string1, string2) {
-  const template = /\W+/g;  // Шаблон для извлечения проблелов и знаков препинания
+  const template = /\W+/g; // Шаблон для извлечения проблелов и знаков препинания
   string1 = string1.replace(template, ""); // удаление пробелов и знаков препинания
   string2 = string2.replace(template, ""); // удаление пробелов и знаков препинания
-  if (string1.length !== string2.length) {  // проверка, равны ли строки по длине (количеству символов)
-    console.log("They aren't anagrams")        
-  }
-  else {
-    string1 = string1.split("").sort().join("") // перевод строки в массив букв, его сортировка и обратный перевод в строку
-    string2 = string2.split("").sort().join("") // перевод строки в массив букв, его сортировка и обратный перевод в строку
-    console.log(string1 !== string2 ? "They aren't anagrams" : "The're anagrams") // проверка строк на идентичность
+  if (string1.length !== string2.length) {
+    // проверка, равны ли строки по длине (количеству символов)
+    console.log("They aren't anagrams");
+  } else {
+    string1 = string1.split("").sort().join(""); // перевод строки в массив букв, его сортировка и обратный перевод в строку
+    string2 = string2.split("").sort().join(""); // перевод строки в массив букв, его сортировка и обратный перевод в строку
+    console.log(
+      string1 !== string2 ? "They aren't anagrams" : "The're anagrams"
+    ); // проверка строк на идентичность
   }
 }
 
-// Проверка функции 
-checkAnagrams("abc def j", "jabcdef")
-checkAnagrams("abc def j", "abc def")
+// Проверка функции
+checkAnagrams("abc def j", "jabcdef");
+checkAnagrams("abc def j", "abc def");
 
 // ++++++++++++++ Task 6 ++++++++++++++++
 
 function countVowels(str) {
   const template = /[aeiou]/g; // Шаблон для гласных букв
-  console.log(str.toLowerCase().match(template).length) // приведение строки к нижнему регистру, извлечение гласных в массив и вывод длины массива (подсчет гласных)
-} 
+  console.log(str.toLowerCase().match(template).length); // приведение строки к нижнему регистру, извлечение гласных в массив и вывод длины массива (подсчет гласных)
+}
 
-// Проверка функции 
-countVowels('agjksbceuhalk;lAI');
-
+// Проверка функции
+countVowels("agjksbceuhalk;lAI");
 
 // ++++++++++++++ Task 7 ++++++++++++++++
 function reverseNumbers(numbers) {
-    let newArray = [];
-    for (let i = numbers.length - 1; i >= 0; i -= 1) {
-        newArray.push(numbers[i])
-    }
-    console.log(newArray)
+  let newArray = [];
+  for (let i = numbers.length - 1; i >= 0; i -= 1) {
+    newArray.push(numbers[i]);
+  }
+  console.log(newArray);
 }
 
-// Проверка функции 
-reverseNumbers([1,2,3,4,5,6,7,8,9,10])
+// Проверка функции
+reverseNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 
 // ++++++++++++++ Task 8 ++++++++++++++++
 
 function getAverage(numbers) {
+  if (numbers.length === 0) {
+    console.log("Sorry, array is empty");
+  } else {
     let sum = 0;
     for (let i = 0; i < numbers.length; i += 1) {
-        sum += numbers[i]
+      sum += numbers[i];
     }
-    console.log(sum / numbers.length)
+    console.log(sum / numbers.length);
+  }
 }
 
-// Проверка функции 
-getAverage([1,2,3,4,5,6,7,8,9,10])
-
+// Проверка функции
+getAverage([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+getAverage([]);
 
 // ++++++++++++++ Task 9 ++++++++++++++++
 
-function inArray(text, array){
-    let result = false;
-    for(let i = 0; i < array.length; i+=1) {
-      if (array[i] === text) {
-        result = true; 
-        break;
-      } 
+function inArray(text, array) {
+  let result = false;
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] === text) {
+      result = true;
+      break;
     }
-    console.log(result)
+  }
+  console.log(result);
 }
 
-// Проверка функции 
-inArray("hello", ["where", "what", "how", "hello", "who"] )
-inArray("hello", ["where", "what", "how", "who"] )
-
+// Проверка функции
+inArray("hello", ["where", "what", "how", "hello", "who"]);
+inArray("hello", ["where", "what", "how", "who"]);
 
 // ++++++++++++++ Task 10 ++++++++++++++++
 
 function changePositions(str) {
-    let array = str.split("");
-    for (let i = 0; i < array.length; i += 2) {
-      let temp = array[i];
-        array[i] = array[i+1];
-        array[i+1] = temp;
-    }
-    console.log(array.join(""))
+  let array = str.split("");
+  for (let i = 0; i < array.length; i += 2) {
+    let temp = array[i];
+    array[i] = array[i + 1];
+    array[i + 1] = temp;
+  }
+  console.log(array.join(""));
 }
 
-// Проверка функции 
-changePositions("123456")
-
+// Проверка функции
+changePositions("123456");
 
 // ++++++++++++++ Task 11 ++++++++++++++++
 
 function getDecade(day) {
-    if (day < 11) {
-      console.log("First decade")
-    }  else if (day < 21) {
-      console.log("Second decade")
-    } else {
-      console.log("Third decade")
-    }  
+  if (day < 11) {
+    console.log("First decade");
+  } else if (day < 21) {
+    console.log("Second decade");
+  } else {
+    console.log("Third decade");
+  }
 }
 
-// Проверка функции 
-getDecade(11)
+// Проверка функции
+getDecade(11);
 
 // ++++++++++++++ Task 12 ++++++++++++++++
 
@@ -231,5 +232,5 @@ function getTimeOfYear(month) {
   }
 }
 
-// Проверка функции 
-getTimeOfYear(11)
+// Проверка функции
+getTimeOfYear(11);
