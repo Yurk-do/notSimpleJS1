@@ -145,13 +145,13 @@ reverseNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 function getAverage(numbers) {
   if (numbers.length === 0) {
     console.log("Sorry, array is empty");
-  } else {
-    let sum = 0;
-    for (let i = 0; i < numbers.length; i += 1) {
-      sum += numbers[i];
-    }
-    console.log(sum / numbers.length);
+    return;
   }
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i += 1) {
+    sum += numbers[i];
+  }
+  console.log(sum / numbers.length);
 }
 
 // Проверка функции
